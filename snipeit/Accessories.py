@@ -20,7 +20,7 @@ except:
     pass
 
 import json
-
+#test merge
 class Accessories(object):
     """Class to access accessories API.    
     """
