@@ -3,8 +3,8 @@ from setuptools import setup
 with open("README.rst","r") as fh:
 	long_description = fh.read()
 	
-setup(name='snipeit',
-      version='1.2',
+setup(name='snipeitv2',
+      version='2.0',
 	  long_description=long_description,
       long_description_content_type="text/markdown",
       description=("Python library to access the SnipeIT API"),
@@ -12,6 +12,6 @@ setup(name='snipeit',
       author='Nathan Allen',
       author_email='allen.nathanield@gmail.com',
       license='MIT',
-      packages=['snipeit'],
+      packages=['snipeitv2'],
       install_requires=['requests','simplejson'],
       zip_safe=False)
