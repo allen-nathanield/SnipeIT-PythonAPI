@@ -113,7 +113,7 @@ class Accessories(object):
         results = requests.get(self.server, headers=headers)        
         return results.content
    
-    def checkoutAcc(self, server, token, accessoryID, userID, note):
+    def checkout(self, server, token, accessoryID, userID, note):
         """Checkout accessories to users.Accessories
         
         Arguments:
