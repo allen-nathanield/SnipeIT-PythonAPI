@@ -113,3 +113,26 @@ class Accessories(object):
         results = requests.get(self.server, headers=headers)        
         return results.content
    
+    def checkoutAcc(self, server, token, accessoryID, userID, note):
+        """Checkout accessories to users.Accessories
+        
+        Arguments:
+            server {string} -- Server URI
+            token {string} -- Token value to be used for accessing the API
+            accessories_ID {integer} -- ID of the accessories to be found
+            userID {integer} -- ID of the accessories to be found
+            
+        Returns:
+            json - Checkout result
+        
+        """
+        self.uri = '/api/v1/accessories/'
+        self.server = server + self.uri + str(accessoryID) + '/checkout'
+        headers = {'Content-Type': 'application/json','Authorization': 'Bearer {0}'.format(token)}
+        payload = {
+            "assigned_to": userID, 
+            "note": note
+            }
+        results = requests.post(self.server, headers=headers, json=payload)
+        print(payload)
+        return json.dumps(results.json(),indent=4, separators=(',', ':'))
