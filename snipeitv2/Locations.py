@@ -93,7 +93,7 @@ class Locations(object):
         self.uri = '/api/v1/locations'
         self.server = server + self.uri
         headers = {'Content-Type': 'application/json','Authorization': 'Bearer {0}'.format(token)}
-        results = requests.post(self.server, headers=headers, json=payload)
+        results = requests.post(self.server, headers=headers, data=payload)
         return json.dumps(results.json(),indent=4, separators=(',', ':'))
 
     def getDetailsByID(self, server, token, locationID):
