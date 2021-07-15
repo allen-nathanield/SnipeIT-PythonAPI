@@ -15,6 +15,7 @@ import pandas as pd
 server='<your snipe-it server>'
 token='<your token value'
 
+
 A = Assets()
 C = Categories()
 
