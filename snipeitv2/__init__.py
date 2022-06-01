@@ -12,3 +12,4 @@ from .Manufacturers import Manufacturers
 from .Fieldsets import Fieldsets
 from .Maintenances import Maintenances
 from .Licenses import Licenses
+from .DataUtil import DataUtil
